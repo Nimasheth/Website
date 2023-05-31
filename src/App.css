@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -12,16 +13,30 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+body {
+  background-color: #000000;
+  font-family: 'Helvetica Neue';
+}
+
+
+.experience-page {
+  background-color: #000000;
+  /* background-image: url('./componets/images/background.png'); 
+  background-size: 100%; */
+  font-family: 'Helvetica Neue';
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
