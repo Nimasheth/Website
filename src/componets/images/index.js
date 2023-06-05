@@ -1,15 +1,27 @@
-import linkedin from './linkedin.png';
-import mappedin from './mapp.png';
-import blueprint from './blueprint.png';
-import MSAM from './MSAM.png';
+import linkedin from './linkedlogo.png';
+import mappedin from './mappedinlogo.png';
+import blueprint from './uwblueprint.png';
+import MSAM from './machine.png';
+import gmail from './gmail.png';
 import cadets from './aircadets.png';
+import github from './githublogo.png';
+import me from './portfolio.png';
+import travel from './travelling.png';
+import community from './community.png';
+import resume from './myresume.png';
 
 const Images = {
     linkedin,
     mappedin,
     blueprint,
     MSAM,
-    cadets
+    cadets,
+    gmail,
+    github,
+    me,
+    community,
+    travel,
+    resume
 };
 
 export default Images;

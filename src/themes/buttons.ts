@@ -4,14 +4,20 @@ import colors from "./colors.js";
         fontSize: "16px",
         minWidth: "180px",
         height: "48px",
-        borderRadius: "100px",
+        borderRadius: "20px",
         fontWeight: "500",
         backgroundColor: "transparent",
-        color: colors.grey[50],
-        border: "2px solid #c9af98",
+        color: colors.grey[500],
+        border: "2px solid",
         fontFamily: 'Helvetica Neue',
       },
-      
+      experienceButton: {
+        fontSize: "16px",
+        minWidth: "35%",
+        height: "275px",
+        borderRadius: "20px",
+        borderColor: 'transparent'
+      },
       circleButton: {
         height: "2.25rem",
         width: "2.25rem",
@@ -20,8 +26,8 @@ import colors from "./colors.js";
         fontWeight: "700",
         fontSize: "12px",
         backgroundColor: "transparent",
-        color: colors.grey[50],
-        border: "2px solid #c9af98",
+        color: colors.grey[500],
+        border: "2px solid",
         fontFamily: 'Helvetica Neue',
       },
 

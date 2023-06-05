@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./styles/Navbar.css";
+import colors from "../themes/colors";
 
 
 function Navbar() {
@@ -23,13 +24,12 @@ function Navbar() {
         </button>
       </div>
       <div className="links">
-        <Link to="/"> About Me </Link>
-        <Link to="/projects"> Projects </Link>
-        <Link to="/experience" onClick={() => window.scrollTo(0, document.getElementById("experience").offsetTop)}>
-         Experience
+        <Link style={{ color: colors.grey[100]}} to="/"> Work </Link>
+        <Link style={{ color: colors.grey[100]}} to="/projects"> About Me </Link>
+        <Link style={{ color: colors.grey[100]}} to="/experience">
+         About Me
         </Link>
-
-        <Link to="/blogs"> Blogs</Link>
+        <Link style={{ color: colors.grey[100]}} to="/blogs"> Blogs</Link>
       </div>
     </div>
   );

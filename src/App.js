@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
@@ -14,17 +14,14 @@ function App() {
     <div className="App">
       <Router>
         <Navbar/>
-
-        <div>
-      <Home />
-      <VStack style={{ marginTop: "33rem" }}>
-        <hr />
-        <Experience />
-      </VStack>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blogs" element={<Blogs />} />
+        </Routes>
       </Router>
     </div>
   );
 }
-
 export default App;

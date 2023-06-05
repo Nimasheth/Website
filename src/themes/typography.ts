@@ -31,7 +31,7 @@ const textStyles = {
     },
     header6: {
       fontSize: "26px",
-      fontWeight: "700",
+      fontWeight: "500",
       lineHeight: "44px",
       letterSpacing: "-0.01em",
     },
@@ -56,6 +56,12 @@ const textStyles = {
     paragraph: {
       fontSize: "18px",
       fontWeight: "200",
+      lineHeight: "23px",
+      letterSpacing: "0",
+    },
+    paragraph2: {
+      fontSize: "14px",
+      fontWeight: "400",
       lineHeight: "23px",
       letterSpacing: "0",
     },
