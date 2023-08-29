@@ -91,6 +91,14 @@ body {
   margin-left: 16.5%;
 }
 
+.grey-bar
+{
+  background-color: rgb(204, 204, 204);
+  height: 10px;
+  width: 30%;
+  margin-left: 16.5%;
+}
+
 
 @keyframes App-logo-spin {
   from {

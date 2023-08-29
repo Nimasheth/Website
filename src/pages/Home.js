@@ -1,10 +1,20 @@
-import React from 'react'
+import {React, useState} from 'react'
+import { Link } from 'react-router-dom'; 
 import {
   Text,
   VStack,
   Box,
   Button,
-  HStack
+  HStack,
+  Link as ChakraLink,
+  Modal, 
+  ModalOverlay, 
+  ModalContent, 
+  ModalHeader, 
+  ModalFooter, 
+  ModalBody, 
+  ModalCloseButton, 
+  useClipboard
 } from "@chakra-ui/react";
 import textStyles from '../themes/typography.ts';
 import TypingText from '../styling/TypingEffect';
@@ -15,6 +25,19 @@ import Images from '../componets/images';
 
 
 function Home() {
+  
+  const [isCopied, setIsCopied] = useState(false);
+
+  const copyEmailToClipboard = () => {
+    const email = 'nimasheth18@gmail.com';
+    navigator.clipboard.writeText(email);
+    setIsCopied(true);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 3000); 
+  };
+
   return (
     <>
     
@@ -34,17 +57,65 @@ function Home() {
 <Button style={{...ButtonStyles.ovalButton, marginTop: "2.75%", marginRight: "54.5%", color: colors.grey[500], borderColor: colors.grey[500] }}> Most Recent Blog </Button>
 </div>
 <HStack style={{marginLeft:"17%", marginTop: "-25%" }}>
-<Button style={{...ButtonStyles.circleButton, marginRight: "1%"}}> 
-<img src={Images.linkedin} style={{ width: '1000%', height: '80%' }}  /> </Button>
-<Button style={{...ButtonStyles.circleButton,  marginRight: "1%"}}> 
-<img src={Images.gmail} style={{ width: '140%', height: '70%' }}  /> </Button>
-<Button style={{...ButtonStyles.circleButton,  marginRight: "1%"}}> 
-<img src={Images.github} style={{ width: '140%', height: '70%' }}  /> </Button>
-<Button style={{...ButtonStyles.circleButton,  marginRight: "1%"}}> </Button>
-<Button style={{...ButtonStyles.circleButton,  marginRight: "1%"}}> </Button>
+
+<ChakraLink href="https://www.linkedin.com/in/nimasheth/" isExternal>
+    <Button style={{ ...ButtonStyles.circleButton }}>
+      <img src={Images.linkedin} style={{ width: '1000%', height: '80%' }} alt="LinkedIn" />
+    </Button>
+  </ChakraLink>
+
+  <Button style={{ ...ButtonStyles.circleButton, marginLeft: "0.6%" }}  onClick={copyEmailToClipboard}
+      >
+        <img
+          src={Images.gmail} /* Assuming Images.gmail contains the image URL */
+          style={{ width: '120%', height: '50%' }}
+          alt="Email"
+        />
+      </Button>
+      {isCopied && <TypingText>Email Copied!</TypingText>}
+
+       
+
+<ChakraLink href="https://github.com/Nimasheth" isExternal>
+<Button style={{...ButtonStyles.circleButton,  marginRight: "0%"}}> 
+<img src={Images.github} style={{ width: '140%', height: '70%' }}  /> 
+</Button>
+</ChakraLink>
+
+<ChakraLink href="https://nimasheth.substack.com/" isExternal>
+<Button style={{...ButtonStyles.circleButton}}> 
+<img src={Images.substack} style={{ width: '140%', height: '70%' }}  /> 
+</Button>
+</ChakraLink>
+
+
 </HStack>
+
 <div>
-<div style={{marginTop: "40%"}} className="orange-bar"></div>
+<div style={{marginTop: "40%"}} className="grey-bar"></div>
+        <Text style={{ ...textStyles.paragraph2, color: colors.grey[100], marginTop: "4%", marginRight: "51.5%",}}>
+          SYSTEMS ENGINEER INTERNSHIP
+        </Text>
+        <Text style={{ ...textStyles.header6, color: colors.grey[500], marginTop: "1.5%", marginRight: "44%",}}>
+        Omniscient Neurotechnology
+        </Text>
+        <Box
+       style={{marginLeft: "16.4%", width: "28%", height: "10%", textAlign: "left", marginTop: "1%"}}>
+        <Text style={{ ...textStyles.paragraph, color: colors.grey[100]}}>
+          Improved and enhanced their indoor mapping software, focusing on their Web SDK functionality.
+        </Text>
+        </Box>
+   
+    <button style={{ ...ButtonStyles.ovalButton, marginTop: '1.3%', marginLeft: '-55.4%', borderColor: 'rgb(204, 204, 204)' }}>
+        Read More
+    </button>
+
+      </div>
+      <Button style={{...ButtonStyles.experienceButton, marginTop: "-16.5%", marginLeft: "40%", backgroundColor: "rgb(204, 204, 204)"}}> 
+      <img src={Images.omni} style={{ width: '55%', height: '100%', marginTop: "0%"}} />  </Button>
+      
+<div>
+<div style={{marginTop: "15%"}} className="orange-bar"></div>
         <Text style={{ ...textStyles.paragraph2, color: colors.grey[100], marginTop: "4%", marginRight: "50%",}}>
           SOFTWARE DEVELOPER INTERNSHIP
         </Text>
@@ -80,27 +151,7 @@ function Home() {
         </div>    
       <Button style={{...ButtonStyles.experienceButton, marginTop: "-16.5%", marginLeft: "40%", backgroundColor: "rgb(31, 95, 234)"}}> 
       <img src={Images.blueprint} style={{ width: '70%', height: '80%', marginTop: "-5%"}}  /> </Button>
-
-      <div>
-      <div style={{ marginTop: "15%"}} className="purple-bar"></div>
-      <Text style={{ ...textStyles.paragraph2, color: colors.grey[100], marginTop: "4%", marginRight: "61.5%",}}>
-          MSAM LABS
-        </Text>
-        <Text style={{ ...textStyles.header6, color: colors.grey[500], marginTop: "1.5%", marginRight: "51.5%",}}>
-        Student Researcher
-        </Text>
-        <Box
-       style={{marginLeft: "16.4%", width: "28%", height: "10%", textAlign: "left", marginTop: "1%"}}>
-        <Text style={{ ...textStyles.paragraph, color: colors.grey[100]}}>
-        Incoming research student on MSAM Lab’s team to research post-processing techniques for 3D-printed copper components.
-        </Text>
-        </Box>
-        <Button style={{...ButtonStyles.ovalButton, marginTop: "1.3%", marginLeft: "-55.4%", borderColor: "rgb(148, 75, 194)"}}> Read More </Button>   
-        </div>    
-      <Button style={{...ButtonStyles.experienceButton, marginTop: "-16.5%", marginLeft: "40%", backgroundColor: "rgb(148, 75, 194)"}}> 
-      <img src={Images.MSAM} style={{ width: '50%', height: '63%', marginTop: "2%"}} /> </Button>
-      
-      
+   
       
 </>
   

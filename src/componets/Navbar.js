@@ -25,10 +25,7 @@ function Navbar() {
       </div>
       <div className="links">
         <Link style={{ color: colors.grey[100]}} to="/"> Work </Link>
-        <Link style={{ color: colors.grey[100]}} to="/projects"> About Me </Link>
-        <Link style={{ color: colors.grey[100]}} to="/experience">
-         About Me
-        </Link>
+        <Link style={{ color: colors.grey[100]}} to="/about"> About Me </Link>
         <Link style={{ color: colors.grey[100]}} to="/blogs"> Blogs</Link>
       </div>
     </div>

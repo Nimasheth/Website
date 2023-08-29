@@ -9,6 +9,10 @@ import me from './portfolio.png';
 import travel from './travelling.png';
 import community from './community.png';
 import resume from './myresume.png';
+import omni from './omni.png';
+import hack from './hack.png';
+import substack from './substack.png';
+
 
 const Images = {
     linkedin,
@@ -21,7 +25,10 @@ const Images = {
     me,
     community,
     travel,
-    resume
+    resume,
+    omni,
+    hack,
+    substack,
 };
 
 export default Images;
