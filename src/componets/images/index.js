@@ -12,6 +12,15 @@ import resume from './myresume.png';
 import omni from './omni.png';
 import hack from './hack.png';
 import substack from './substack.png';
+import punta from './punta.png';
+import cottage from './cottage.png';
+import cotty from './cotty.png';
+import wedding from './wedding.png';
+import eng from './eng.png';
+import colli from './colli.png';
+import me2 from './me2.png';
+import bp from './bp.png';
+
 
 
 const Images = {
@@ -29,6 +38,14 @@ const Images = {
     omni,
     hack,
     substack,
+    punta,
+    cottage,
+    cotty,
+    wedding,
+    eng,
+    colli,
+    me2,
+    bp
 };
 
 export default Images;

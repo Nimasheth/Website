@@ -9,7 +9,7 @@ function About() {
   return (
     <div>
    
-      <img src={Images.me} style={{ width: '30%', marginTop: "12%", marginRight: "50%"}} />
+      <img src={Images.me2} style={{ width: '30%', marginTop: "12%", marginRight: "50%"}} />
         <Text style={{...textStyles.header6, color: colors.grey[500], marginLeft: "30%", marginTop: "-31%"}}> I believe in developing to influence positive change.</Text>
         <div style={{marginLeft: "44.2%", marginTop: "-1.5%"}} className="orange2-bar"></div>
         <Box
